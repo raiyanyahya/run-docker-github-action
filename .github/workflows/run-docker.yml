@@ -19,4 +19,11 @@ jobs:
         
       - name: pull image
         run: docker pull docker.pkg.github.com/raiyanyahya/simple-docker-github-action/simple:latest
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: docker.pkg.github.com/raiyanyahya/simple-docker-github-action/simple:latest
+      credentials:
+        username: $GITHUB_ACTOR
+        password: ${{secrets.GITHUB_TOKEN}}
       
