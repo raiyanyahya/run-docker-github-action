@@ -20,5 +20,6 @@ jobs:
       - name: pull image
         run: docker pull docker.pkg.github.com/raiyanyahya/simple-docker-github-action/simple:latest
       - name: run image
-        run: docker run -v ./:/workdir:delegated simple abc
+        #run: docker run -v ./:/workdir:delegated simple abc
+        run: docker images
       
