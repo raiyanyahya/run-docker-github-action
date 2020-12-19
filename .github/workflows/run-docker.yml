@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     container: simple:latest
     steps:
+      - name: login
+        run: docker login -u $GITHUB_ACTOR -p ${{secrets.GITHUB_TOKEN}} docker.pkg.github.com
       - name: Run my simple image
         uses: docker://raiyanyahya/simple-docker-github-action/simple:latest
         with:
