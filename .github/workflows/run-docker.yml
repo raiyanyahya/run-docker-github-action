@@ -12,7 +12,7 @@ jobs:
     container: simple:latest
     steps:
       - name: Run my simple image
-      - uses: docker://raiyanyahya/simple-docker-github-action/simple:latest
+        uses: docker://raiyanyahya/simple-docker-github-action/simple:latest
         with:
           #entrypoint: /opt/box/box
           args: 'input'
