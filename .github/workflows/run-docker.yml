@@ -1,6 +1,5 @@
 
 name: run-docker
-
 on:
   push:
     branches: [ main ]
