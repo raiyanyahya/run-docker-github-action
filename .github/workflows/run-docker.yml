@@ -9,7 +9,6 @@ on:
 jobs:
   container:
     runs-on: ubuntu-latest
-    container: simple:latest
     steps:
       - name: login
         run: docker login -u $GITHUB_ACTOR -p ${{secrets.GITHUB_TOKEN}} docker.pkg.github.com
